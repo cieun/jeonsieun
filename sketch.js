@@ -7,21 +7,22 @@ function preload(){
   lowerDogs.hide();
   
   dogs = createCapture(VIDEO);
+  dogs.size(windowWidth, windowHeight);
   dogs.hide();
 }
 
 let pg;
 
 function setup() {
-  createCanvas(640, 480);
-  pg = createGraphics(640, 480);
+  createCanvas(windowWidth, windowHeight);
+  pg = createGraphics(windowWidth, windowHeight);
   
 }
 
 function draw() {
 
     //이미지부분
-  image(dogs,0,0);
+  image(dogs,0,0, windowWidth, windowHeight);
   
     //아스키코드 부분
   pg.background(0);
@@ -56,4 +57,8 @@ function draw() {
   image(tile,mouseX,mouseY);
   
   
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
