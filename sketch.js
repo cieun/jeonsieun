@@ -53,7 +53,7 @@ function draw() {
   }
   
   //image(dogs,0,0,width,height);
-  let tile = pg.get(mouseX,mouseY,330,330);
+  let tile = pg.get(mouseX,mouseY,600,600);
   image(tile,mouseX,mouseY);
   
   
